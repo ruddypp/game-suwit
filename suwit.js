@@ -27,15 +27,20 @@ if ( player == komputer){
     hasil = ( komputer == 'kertas') ? 'MENANG' : 'KALAH';
 }else if( player == 'kertas'){
     hasil = (komputer == 'gunting') ? 'KALAH' : 'MENANG';
+}else if(player == 'batu'){
+    hasil = ( komputer == 'gunting') ? 'MENANG' : 'KALAH';
+}else if(player == 'gunting'){
+    hasil = (komputer == 'batu') ? 'KALAH' : 'MENANG';
 }else {
     hasil = 'FLISS KAMU SALAH PILIH'
 }
+
 
 alert('KAMU PILIH : ' + player + '\nKOMPUTER PILIH : ' + komputer + '\n HASILNYA ADALAH....' + hasil);
 
 ulang = confirm('Lagi ga bray ?');
 
-if (ulang == true){
+if (ulang === true){
     alert('Lanjut');
 }else{
     alert('TENGS DAH MAIN');

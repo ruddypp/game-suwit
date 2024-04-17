@@ -1,3 +1,5 @@
+let ulang = true;
+while (ulang){
 let mulai = true;
 
     // player
@@ -18,28 +20,24 @@ console.log(komputer);
     
 
 // kondisi
-let hasil=''; 
+let hasil = '';
 if ( player == komputer){
-    hasil = 'HASIL SERI';
+    hasil = 'Seri';
 } else if(player == 'gunting'){
-    if(komputer == 'kertas' ){
-        hasil = 'KAMU MENANG!';
-    }else{
-        hasil = 'KOMPUTER MENANG!'
-    }
-} else if( player == 'kertas'){
-    if( komputer == 'batu'){
-        hasil = 'KAMU MENANG!';
-    }else{
-        hasil = 'KOMPUTER MENANG!';
-    }
-}else{
-    hasil = 'FLIS KAMU PILIH TIGA ITU AJA!!!!!!'
+    hasil = ( komputer == 'kertas') ? 'MENANG' : 'KALAH';
+}else if( player == 'kertas'){
+    hasil = (komputer == 'gunting') ? 'KALAH' : 'MENANG';
+}else {
+    hasil = 'FLISS KAMU SALAH PILIH'
 }
 
 alert('KAMU PILIH : ' + player + '\nKOMPUTER PILIH : ' + komputer + '\n HASILNYA ADALAH....' + hasil);
 
-confirm('Lagi ga bray ?');
+ulang = confirm('Lagi ga bray ?');
 
-alert('TENGS DAH MAIN');
-
+if (ulang == true){
+    alert('Lanjut');
+}else{
+    alert('TENGS DAH MAIN');
+}
+}
